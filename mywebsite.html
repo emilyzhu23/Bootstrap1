@@ -7,7 +7,6 @@
 -->
   <head>
     <title>Skiing</title>
-    <!-- <link rel="stylesheet" href = "mywebsite.css" /> -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
@@ -24,58 +23,32 @@
   </head>
 
   <body>
-    <script>
-      // For the image gallery:
-      var slideIndex = 1;
-      showSlides(slideIndex);
-
-      // Next/previous controls
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
-      }
-
-      // Thumbnail image controls
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("demo");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-      }
-    </script>
-
     <!-- Navigate the page -->
     <nav class="navbar navbar-expand-sm bg-info navbar-dark fixed-top">
       <a class="navbar-brand" href="#">Emily's Website</a>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#Ski">Skiing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#Slope">Slopes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#Fear">Fear</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#Gear">Gear</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#Basics">How To Ski</a>
-        </li>
-      </ul>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#Ski">Skiing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Slope">Slopes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Fear">Fear</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Gear">Gear</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Basics">How To Ski</a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <br />
@@ -94,58 +67,63 @@
     </div>
 
     <hr />
-    <p class = "paragraphblue">
-      The type of skiing that most people do is alpine skiing where skiiers compete to see who can get ski down the hill the fastest.
-    </p>
+    <div class = "container-fluid">
+      <div class = "row text-center">
+        <div class = "col-sm-3 col-md-4 col-lg-6 text-center align-middle">
+          <div class = "container-fluid text-center">
+            <h2>
+              Types of Skiing:
+            </h2>
+          </br>
+          </div>
+          <div class="btn-group-vertical">
+            <div class="btn-group">
+              <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                 Alpine Skiing &nbsp<span class="badge badge-light">Most Popular&#11088;</span>
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Alpine_skiing">Learn More</a>
+                <a class="dropdown-item" href="https://www.youtube.com/watch?v=PBnjfnqxmMk">Watch an Example</a>
+              </div>
+            </div>
 
-    <pre>Look   at    how    much    fun    this    man    is    having: </pre>
-    <!-- Image map -->
-    <img src = "skiing1.jpg" class = "img-fluid rounded mx-auto d-block" alt = "Alpine Skiing" usemap = "#skimap" />
-    <map name = "skimap">
-      <area shape = "rect" coords = "184,188, 366,208" alt = "Skis" href = "https://www.mec.ca/en/explore/how-to-choose-downhill-skis"/>
-      <area shape = "rect" coords = "338,67, 369,80" alt = "Goggles" href = "https://www.rei.com/learn/expert-advice/goggles.html"/>
-      <area shape = "poly" coords = "386,168, 384,177, 548,192" alt = "Poles" href = "https://www.thesnowcentre.com/snowsure/news/what-are-ski-poles-for"/>
-    </map>
+            <div class="btn-group">
+              <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                 Cross-Country Skiing
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Cross-country_skiing">Learn More</a>
+                <a class="dropdown-item" href="https://www.youtube.com/watch?v=77OVxb2WliA">Watch an Example</a>
+              </div>
+            </div>
 
-    <br />
-    <br />
-    
-    <div class = "container">
-      <h3>Types of Skiing: </h3>
-      <div class="btn-group">
-        <div class="btn-group">
-          <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
-             Alpine Skiing
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Alpine_skiing">Learn More</a>
-            <a class="dropdown-item" href="https://www.youtube.com/watch?v=PBnjfnqxmMk">Watch an Example</a>
+            <div class="btn-group">
+              <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                 Freestyle Skiing
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Freestyle_skiing#:~:text=Freestyle%20skiing%20is%20a%20skiing,and%20boxes%20on%20their%20skis.">
+                  Learn More
+                </a>
+                <a class="dropdown-item" href="https://www.youtube.com/watch?v=WSl1cVCpBFs">Watch an Example</a>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="btn-group">
-          <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
-             Cross-Country Skiing
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Cross-country_skiing">Learn More</a>
-            <a class="dropdown-item" href="https://www.youtube.com/watch?v=77OVxb2WliA">Watch an Example</a>
-          </div>
-        </div>
-
-        <div class="btn-group">
-          <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
-             Freestyle Skiing
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Freestyle_skiing#:~:text=Freestyle%20skiing%20is%20a%20skiing,and%20boxes%20on%20their%20skis.">
-              Learn More
-            </a>
-            <a class="dropdown-item" href="https://www.youtube.com/watch?v=WSl1cVCpBFs">Watch an Example</a>
-          </div>
+        <div class = "col-sm-9 col-md-8 col-lg-6">
+          <img src = "skiing1.jpg" class = "img-fluid rounded mx-auto d-block" alt = "Alpine Skiing" usemap = "#skimap" />
+          <map name = "skimap">
+            <area shape = "rect" coords = "184,188, 366,208" alt = "Skis" href = "https://www.mec.ca/en/explore/how-to-choose-downhill-skis"/>
+            <area shape = "rect" coords = "338,67, 369,80" alt = "Goggles" href = "https://www.rei.com/learn/expert-advice/goggles.html"/>
+            <area shape = "poly" coords = "386,168, 384,177, 548,192" alt = "Poles" href = "https://www.thesnowcentre.com/snowsure/news/what-are-ski-poles-for"/>
+          </map>
         </div>
       </div>
     </div>
+
+    <br />
+    <br />
+
 
     <hr />
 
@@ -160,174 +138,226 @@
           </p>
         </div>
         <div class = "col-md text-center">
-          <h3>Ski Resorts in California:</h3>
-          <iframe src = "https://skicalifornia.org/best-california-ski-resorts/" title = "California Ski Resorts"></iframe>
+          <button type = "button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Ski Resorts in California</button>
+          <div id="demo" class="collapse">
+            <iframe src = "https://skicalifornia.org/best-california-ski-resorts/" title = "California Ski Resorts" style = "width: 384px; height: 500px;"></iframe>
+          </div>
         </div>
       </div>
     </div>
     <hr />
 
+    <div class = "container-fluid">
+      <div class = "row text-center">
+        <div class = "col-sm-6 col-lg-6 text-center align-middle">
+          <h2 id = "Fear">Fear?</h2>
+          <p>
+            Okay. Sliding down an icy hill and having seeming no control over where you're going is scary. I can't deny that.
+            There's definitely a little bit of danger involved with skiing especially in the very beginning when it's hard to stop or turn and there are a lot of people.
+            But you get the hang of it and it becomes a lot less dangerous once you gain control over at least how to stop.
+          </p>
+        </div>
+        <div class = "col-sm-5 col-lg-6 text-center">
+          <div class="alert alert-warning alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <div class="spinner-grow spinner-grow-sm text-danger"></div>
+            Tip: Never lie and say that you're better at skiing than you actually are! It could end in a potentially dangerous situation :)
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr/>
 
-    <h2 id = "Fear">Fear?</h2>
-    <p>
-      Okay. Sliding down an icy hill and having seeming no control over where you're going is scary. I can't deny that.
-      There's definitely a little bit of danger involved with skiing especially in the very beginning when it's hard to stop or turn and there are a lot of people.
-      But you get the hang of it and it becomes a lot less dangerous once you gain control over at least how to stop.
-    </p>
-    <p class = "paragraphblue"><q>For me, skiing is a physical necessity. I have a need for risk</q> – Jean-Marie Messier &#128153;</p>
-    <hr />
+    <div class = "container">
+      <div class = "row">
+        <div class = "col-m-7 col-lg-6">
+          <h2 id = "Gear">Gear?</h2>
+          <p>
+            It's going to be cold. Obviously. So snow pants and a heavy parka. One that's definitely very important is gloves/mittens. I personally prefer gloves because dexterity.
+            But either way, you need them. When you fall, you'll probably land somewhat on your hands so you definitely want to protect those from the snow. A helmet is also a neccesity for safety reasons.
+            Goggles or sunglasses are also a must. The glare from the snow can really damage your eyes and also there'll probably be cold wind you don't want in your eyes anyways as you ski down. I know
+            it might sound weird but I would suggest wearing sunscreen. The sun reflecting off the snow is pretty strong &#38; you probably don't want a goggles tan line on your face.
+          </p>
+        </div>
 
-    <div class="alert alert-warning alert-dismissible">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      Tip: Never lie and say that you're better at skiing than you actually are! It could end in a potentially dangerous situation :)
+        <div class = "col-m-5 col-lg-6">
+          <h3>Checklist of Gear:</h3>
+          <!-- Adds a clickable checkbox before the text -->
+          <ol type="1">
+            <li class = "check">
+              <input type="checkbox" id="snowpants" name="snowpants" />
+              <label for = "snowpants">Snow Pants</label>
+            </li>
+            <li class = "check">
+              <input type="checkbox" id="snowparka" name="snowparka" />
+              <label for = "snowparka">Parka</label>
+            </li>
+            <li class = "check">
+              <input type="checkbox" id="goggles" name="goggles" />
+              <label for = "goggles">Goggles</label>
+            </li>
+            <li class = "check">
+              <input type="checkbox" id="gloves" name="gloves" />
+              <label for = "gloves">Gloves</label>
+            </li>
+            <li class = "check">
+              <input type="checkbox" id="helmet" name="helmet" />
+              <label for = "helmet">Helmet</label>
+            </li>
+            <li class = "check">
+              <input type="checkbox" id="sunscreen" name="sunscreen" />
+              <label for = "sunscreen">Sunscreen</label>
+            </li>
+            <li class = "check">
+              <input type="checkbox" id="skis" name="skis" />
+              <label for = "skis">Skis</label>
+            </li>
+            <li class = "check">
+              <input type="checkbox" id="boots" name="boots" />
+              <label for = "boots">Ski Boots</label>
+            </li>
+            <li class = "check">
+              <input type="checkbox" id="poles" name="poles" />
+              <label for = "poles">Poles</label>
+            </li>
+          </ol>
+        </div>
+      </div>
     </div>
 
-    <h2 id = "Gear">Gear?</h2>
-    <p>
-      It's going to be cold. Obviously. So snow pants and a heavy parka. One that's definitely very important is gloves/mittens. I personally prefer gloves because dexterity.
-      But either way, you need them. When you fall, you'll probably land somewhat on your hands so you definitely want to protect those from the snow. A helmet is also a neccesity for safety reasons.
-      Goggles or sunglasses are also a must. The glare from the snow can really damage your eyes and also there'll probably be cold wind you don't want in your eyes anyways as you ski down. I know
-      it might sound weird but I would suggest wearing sunscreen. The sun reflecting off the snow is pretty strong &#38; you probably don't want a goggles tan line on your face.
-    </p>
-
-    <h3>Checklist of Gear:</h3>
-    <!-- Adds a clickable checkbox before the text -->
-    <ol type="1">
-      <li class = "check">
-        <input type="checkbox" id="snowpants" name="snowpants" />
-        <label for = "snowpants">Snow Pants</label>
-      </li>
-      <li class = "check">
-        <input type="checkbox" id="snowparka" name="snowparka" />
-        <label for = "snowparka">Parka</label>
-      </li>
-      <li class = "check">
-        <input type="checkbox" id="goggles" name="goggles" />
-        <label for = "goggles">Goggles</label>
-      </li>
-      <li class = "check">
-        <input type="checkbox" id="gloves" name="gloves" />
-        <label for = "gloves">Gloves</label>
-      </li>
-      <li class = "check">
-        <input type="checkbox" id="helmet" name="helmet" />
-        <label for = "helmet">Helmet</label>
-      </li>
-      <li class = "check">
-        <input type="checkbox" id="sunscreen" name="sunscreen" />
-        <label for = "sunscreen">Sunscreen</label>
-      </li>
-      <li class = "check">
-        <input type="checkbox" id="skis" name="skis" />
-        <label for = "skis">Skis</label>
-      </li>
-      <li class = "check">
-        <input type="checkbox" id="boots" name="boots" />
-        <label for = "boots">Ski Boots</label>
-      </li>
-      <li class = "check">
-        <input type="checkbox" id="poles" name="poles" />
-        <label for = "poles">Poles</label>
-      </li>
-    </ol>
-
     <hr />
 
-    <h2 style id = "Basics">How To Ski: The Basic Basics</h2>
-    <button onclick="document.location='https://www.youtube.com/watch?v=n-UBie4Ioqo'" type="button" class="btn btn-primary btn-block">Watch This Video First</button>
+    <div class = "container">
+      <div class = "row text-center">
+        <div class = "col-sm-7 col-m-5">
+          <h2 style id = "Basics">How To Ski: The Basic Basics</h2>
+        </div>
+        <div class = "col-sm-5 col-m-5">
+          <button onclick="document.location='https://www.youtube.com/watch?v=n-UBie4Ioqo'" type="button" class="btn btn-primary btn-block">Watch This Video First</button>
+        </div>
+      </div>
+
+      <br />
+
+      <table class = "table table-hover table-bordered table-primary">
+        <thead class = "thead-light"
+        <tr>
+          <th>Skill</th>
+          <th>Description</th>
+          <th>Video</th>
+        </tr>
+        <tr>
+          <td>Ski Gear</td>
+          <td>How to put on ski boots; How to put on and take off skis; Ski Parts</td>
+          <td>
+            <button  type="button" class="btn btn-primary btn-block" onclick="document.location='https://youtu.be/LaF1tT1l7c0'">Watch Here</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Basic Moves On Snow</td>
+          <td>How to glide on snow; How to Walk; Getting Up</td>
+          <td>
+            <button  type="button" class="btn btn-primary btn-block" onclick="document.location='https://youtu.be/l6AG5WLUaNo'">Watch Here</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Chairlifts</td>
+          <td>How to Get On and Off Chairlifts</td>
+          <td>
+            <button type="button" class="btn btn-primary btn-block" onclick="document.location='https://www.youtube.com/watch?v=ETYe-Kg1JJs'">Watch Here</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Basic Stance</td>
+          <td>How to Stand with Skis</td>
+          <td>
+            <button type="button" class="btn btn-primary btn-block" onclick="document.location='https://youtu.be/xpS7B9FN9Q4'">Watch Here</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Basic Moves Pt.2</td>
+          <td>How to Turn and Stop</td>
+          <td>
+            <button type="button" class="btn btn-primary btn-block" onclick="document.location='https://youtu.be/zAQVuC1Q4mw'">Watch Here</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Turning</td>
+          <td>How to Turn (In Depth)</td>
+          <td>
+            <button type="button" class="btn btn-primary btn-block" onclick="document.location='https://youtu.be/yg75ee5QLMc'">Watch Here</button>
+          </td>
+        </tr>
+      </table>
+    </div>
 
     <br />
-
-    <table class = "table table-hover table-bordered table-primary">
-      <caption>Ski Skills</caption>
-      <thead class = "thead-light"
-      <tr>
-        <th>Skill</th>
-        <th>Description</th>
-        <th>Video</th>
-      </tr>
-      <tr>
-        <td>Ski Gear</td>
-        <td>How to put on ski boots; How to put on and take off skis; Ski Parts</td>
-        <td>
-          <button class = "tutorial" onclick="document.location='https://youtu.be/LaF1tT1l7c0'">Watch Here</button>
-        </td>
-      </tr>
-      <tr>
-        <td>Basic Moves On Snow</td>
-        <td>How to glide on snow; How to Walk; Getting Up</td>
-        <td>
-          <button class = "tutorial" onclick="document.location='https://youtu.be/l6AG5WLUaNo'">Watch Here</button>
-        </td>
-      </tr>
-      <tr>
-        <td>Chairlifts</td>
-        <td>How to Get On and Off Chairlifts</td>
-        <td>
-          <button class = "tutorial" onclick="document.location='https://www.youtube.com/watch?v=ETYe-Kg1JJs'">Watch Here</button>
-        </td>
-      </tr>
-      <tr>
-        <td>Basic Stance</td>
-        <td>How to Stand with Skis</td>
-        <td>
-          <button class = "tutorial" onclick="document.location='https://youtu.be/xpS7B9FN9Q4'">Watch Here</button>
-        </td>
-      </tr>
-      <tr>
-        <td>Basic Moves Pt.2</td>
-        <td>How to Turn and Stop</td>
-        <td>
-          <button class = "tutorial" onclick="document.location='https://youtu.be/zAQVuC1Q4mw'">Watch Here</button>
-        </td>
-      </tr>
-      <tr>
-        <td>Turning</td>
-        <td>How to Turn (In Depth)</td>
-        <td>
-          <button class = "tutorial" onclick="document.location='https://youtu.be/yg75ee5QLMc'">Watch Here</button>
-        </td>
-      </tr>
-    </table>
-
     <br />
-    <br />
+
+    <div class = "container">
+      <form>
+        <div class="form-group">
+          <label for="usr">Name:</label>
+          <input type="text" class="form-control" placeholder="Enter your name" id="usr" name = "name">
+        </div>
+
+        <div>Select One</div>
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" id="check1" name="radioopt" value="option1">I like skiing </input>
+          </label>
+        </div>
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" id="check2" name="radioopt" value="option2">I don't like skiing </input>
+          </label>
+        </div>
+
+        <div>How Good Are You At Skiing?</div>
+        <div class="form-group">
+          <input type="range" class="form-control-range" name="range">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
 
     <!-- Image Gallery -->
-    <div id="skigallery" class="carousel slide" data-ride="carousel">
+    <div class = "container">
+      <div id="skigallery" class="carousel slide" data-ride="carousel">
 
-      <!-- Indicators -->
-      <ul class="carousel-indicators">
-        <li data-target="#skigallery" data-slide-to="0" class="active"></li>
-        <li data-target="#skigallery" data-slide-to="1"></li>
-        <li data-target="#skigallery" data-slide-to="2"></li>
-        <li data-target="#skigallery" data-slide-to="3"></li>
-      </ul>
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#skigallery" data-slide-to="0" class="active"></li>
+          <li data-target="#skigallery" data-slide-to="1"></li>
+          <li data-target="#skigallery" data-slide-to="2"></li>
+          <li data-target="#skigallery" data-slide-to="3"></li>
+        </ul>
 
-      <!-- The slideshow -->
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class = "img-fluid" src="skigallery1.jpg" alt="Ski Hill">
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class = "img-fluid" src="skigallery1.jpg" alt="Ski Hill">
+          </div>
+          <div class="carousel-item">
+            <img class = "img-fluid" src="skigallery2.jpg" alt="Ski Lift">
+          </div>
+          <div class="carousel-item">
+            <img class = "img-fluid" src="skigallery3.jpg" alt="Beginner Ski">
+          </div>
+          <div class="carousel-item">
+            <img class = "img-fluid" src="skigallery4.jpg" alt="Sunset Ski">
+          </div>
         </div>
-        <div class="carousel-item">
-          <img class = "img-fluid" src="skigallery2.jpg" alt="Ski Lift">
-        </div>
-        <div class="carousel-item">
-          <img class = "img-fluid" src="skigallery3.jpg" alt="Beginner Ski">
-        </div>
-        <div class="carousel-item">
-          <img class = "img-fluid" src="skigallery4.jpg" alt="Sunset Ski">
-        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#skigallery" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#skigallery" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
       </div>
-
-      <!-- Left and right controls -->
-      <a class="carousel-control-prev" href="#skigallery" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </a>
-      <a class="carousel-control-next" href="#skigallery" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </a>
-
     </div>
 
   </body>
